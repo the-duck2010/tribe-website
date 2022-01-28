@@ -1,13 +1,16 @@
 var app = require("express");
-  var appdata = "Waiting";
 
-  function findappdata() {
-    if ((app = "required")) {
+if ("firsttime" == "true") {
+  var appdata = "Waiting";
+}
+
+function findappdata(type) {
+  if ((app = "required")== type) {
       appdata = "Succesfully Verified User";
       window.open("home.html");
-    }
-    if ((app = "required")) {
+  }
+  if ((app = "required")!= type) {
       appdata = "Not Verified";
       window.close();
-    }
   }
+}
