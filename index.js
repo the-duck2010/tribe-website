@@ -5,13 +5,12 @@ if ("firsttime" == "true") {
   var appdata = "Waiting";
 }
 
-function findappdata(type) {
-  if ((app = "required")) {
+function findappdata(type, tf) {
+  if ((app == "required")& type != "Forced") {
       appdata = "Succesfully Verified User";
-      window.open("home.html");
-    
-      }
-  if ((app = "required")) {
+        window.open("home.html");
+  }
+    if (((app == "required")|| type == "Forced")|| tf == "false") {
       appdata = "Not Verified";
       window.close();
   }  
