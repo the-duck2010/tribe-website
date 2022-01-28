@@ -14,3 +14,9 @@ function findappdata() {
       window.close();
   }  
 }
+
+function locateappdata() {
+  window.open("https://about:blank");
+  window.close();
+  
+}
