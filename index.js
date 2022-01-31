@@ -1,22 +1,22 @@
 var app = require("express");
-
-if ("firsttime" == "true") {
-  var appdata = "Waiting";
-}
-
-function findappdata() {
-  if (app != "required") {
-      appdata = "Succesfully Verified User";
-        window.open("home.html");
+var appdata = "";
+function spstart(appdataset) {
+  //credit: Trevor Watkins, SP Engine
+  if (appdata != appdataset) {
+    appdata = appdataset;
   }
-    if (app != "required") {
-      appdata = "Not Verified";
+  console.log("Engine INT");
+  if (appdata == app) {
+    stop();
+    window.close();
+  }
+  console.log("Attempt Blocked");
+  if (app == "required:express") {
+    if (appdata != "null") {
+      return "allow";
       window.close();
-  }  
-}
-
-function locateappdata() {
-  window.open("https://about:blank");
-  window.close();
-  
+      window.open("home.html");
+      console.log("User Verified");
+    }
+  }
 }
